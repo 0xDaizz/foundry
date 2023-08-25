@@ -118,7 +118,6 @@ foundry-abi = { path = "crates/abi" }
 foundry-binder = { path = "crates/binder" }
 foundry-cli = { path = "crates/cli" }
 foundry-common = { path = "crates/common" }
-foundry-config = { path = "crates/config" }
 foundry-evm = { path = "crates/evm" }
 foundry-macros = { path = "crates/macros" }
 foundry-test-utils = { path = "crates/test-utils" }
