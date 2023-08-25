@@ -74,7 +74,7 @@ fn contract_root_node<'a>(nodes: &'a [Node], contract_id: &'a str) -> Option<&'a
             let contract_data = &n.other;
             if let Value::String(contract_name) = contract_data.get("name")? {
                 if contract_id.ends_with(contract_name) {
-                    return Some(n)
+                    return Some(n);
                 }
             }
         }
@@ -105,7 +105,7 @@ fn get_fn_data(node: &Node) -> Option<(String, String, String)> {
         let fn_data = &node.other;
         let fn_name: String = get_fn_name(fn_data)?;
         let (fn_docs, docs_src_line): (String, String) = get_fn_docs(fn_data)?;
-        return Some((fn_name, fn_docs, docs_src_line))
+        return Some((fn_name, fn_docs, docs_src_line));
     }
 
     None
@@ -133,7 +133,7 @@ fn get_fn_docs(fn_data: &BTreeMap<String, Value>) -> Option<(String, String)> {
                     .unwrap_or_else(|| String::from("<no-src-line-available>"));
 
                 src_line.retain(|c| c != '"');
-                return Some((comment.into(), src_line))
+                return Some((comment.into(), src_line));
             }
         }
     }
